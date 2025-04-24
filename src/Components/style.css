@@ -1,0 +1,76 @@
+.header-landing-page {
+    height: 8vh;
+    width: 100%;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    color: #fff;
+    font-weight: 500;
+    /* border-bottom: 1px solid white; */
+    box-shadow: 0 0.3px 0 white;
+    padding-top: 0.5vh;
+}
+
+.Registration-Header-Right-Side {
+    cursor: pointer;
+    display: flex;
+    margin: 10px 10px 10px 0px;
+    font-weight: 600;
+}
+
+.Registration-Header-Right-Side-img {
+    height: 20px;
+    width: 20px;
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Icons\phone-solid.svg');
+    margin-right: 10px;
+    margin-top: 2px;
+}
+
+.Registration-Header-left-Side {
+    display: flex;
+    margin-top: 10px;
+    /* padding-left: 50vw; */
+    font-weight: 600;
+}
+
+
+.Registration-Header-left-Side-col2-img {
+    cursor: pointer;
+    height: 21px;
+    width: 21px;
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Icons\Exit.svg');
+    margin-right: 10px;
+}
+.nav-bar{
+    height: 7.6rem;
+    width: 100%;
+    padding: 0 12rem;
+    background-color: #DADADA;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.nav-bar-signin-opt{
+    display: flex;
+    font-weight: 500;
+}
+.nav-bar-signin-opt img{
+    height: 1rem;
+    padding-top: 4px;
+    margin-left: 10px;
+    margin-right: 4px;
+    margin-top: 2px;
+}
+.nav-bar-signin-opt-Links{
+    width: 30rem;
+    justify-content: space-between;
+}
+.nav-bar-signin-opt-Link{
+    color: black;
+    text-decoration: none;
+}
+.nav-bar-signin-opt-Link:hover{
+    color: #ED1C27;
+}
