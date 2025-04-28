@@ -74,3 +74,283 @@
 .nav-bar-signin-opt-Link:hover{
     color: #ED1C27;
 }
+
+/* Home */
+
+.home-hero-section{
+    height: 100vh;
+    width: 100%;
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Images\Group 470.jpg');
+    background-size: cover;
+    padding: 2rem 12rem;
+    color: #fff;
+}
+.home-hero-section p{
+    font-size: 17px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.home-hero-section-box{
+    width: 27rem;
+    height: 21rem;
+    margin-right: 3rem;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.home-hero-section-box h3{
+    color: #5F5F5F;
+}
+.home-hero-section-box p{
+    color: #909090;
+    font-size: 15px;
+    padding: 0 1rem;
+}
+.home-hero-section-box-img {
+    height: 20px;
+    width: 20px;
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Icons\red-phone-solid.svg');
+    margin-right: 10px;
+    margin-top: 2px;
+}
+.home-hero-section-box-p{
+    line-height: 3px;
+    text-align: center;
+    font-weight: 500;
+}
+.home-hero-section-box-input{
+    width: 7rem;
+    height: 2.5rem;
+    border: 1px solid #ECECEC;
+    border-radius: 5px;
+    margin-left: 85px;
+    margin-right: 20px;
+}
+.home-hero-section-box-button{
+    width: 8rem;
+    height: 2.5rem;
+    background-color: #E30517;
+    padding-top: 6px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding-left: 10px;
+}
+.home-hero-section-box-button img{
+    width: 22px;
+    margin-left: 5px;
+    margin-bottom: 7px;
+}
+.home-section-1{
+    padding: 4rem 12rem;
+}
+.home-section-1 h2{
+    padding: 0 10rem;
+    color: #5F5F5F;
+}
+.home-section-1-logos{
+    display: flex;
+    justify-content: space-evenly;
+    height: 6.8rem;
+    align-items: center;
+    margin: 2rem 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.50);
+}
+.home-section-1-logos img{
+    height: 2.5rem;
+}
+.home-section-1 p{
+    color: #909090;
+    font-size: 17px;
+}
+.home-section-1-boxes{
+    display: flex;
+    justify-content: space-between;
+}
+.home-section-1-boxes h5{
+    color: #5F5F5F;
+    font-weight: 600;
+    margin: 3rem 1rem 1rem 1rem;
+}
+.home-section-1-boxes p{
+    color: #909090;
+    margin: 0rem 1rem;
+    font-size: 15px;
+}
+.home-section-1-box-1{
+    width: 14rem;
+    height: 27rem;
+    border-radius: 15px;
+    background-color: #FAF2F3;
+}
+.home-section-1-box-2{
+    width: 14rem;
+    height: 24rem;
+    border-radius: 15px;
+    background-color: #FCF8E8;
+}
+.home-sec-1-images-sections{
+    display: flex;
+    justify-content: space-between;
+}
+.home-sec-1-images-sec-img{
+    height: 16rem;
+}
+.home-sec-1-images-sec-img-2{
+    height: 10rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+.home-sec-1-images-sec-img-2-wrap{
+    background-color: #DEDEDE;
+    border-radius: 50%;
+    height: 16rem;
+    width: 16rem;
+}
+.home-sec-1-images-sec{
+    width: 16rem;
+}
+.home-sec-1-images-sec h4{
+    text-align: center;
+    color: #5F5F5F;
+    margin-top: 15px;
+}
+.home-sec-1-images-sec h5{
+    text-align: center;
+    font-size: 17px;
+    color: #5F5F5F;
+}
+.home-sec-1-images-sec p{
+    text-align: center;
+    color: #909090;
+}
+.home-sec-1-images-sec h6{
+    text-align: center;
+    font-size: 17px;
+    color: #E30517;
+}
+
+/* Section-2 */
+
+.home-section-2{
+    width: 100%;
+    height: 39rem;
+    background-color: #E30517;
+    padding: 4rem 12rem;
+    color: #fff;
+}
+.home-section-2 p{
+    padding: 0 6rem;
+}
+.home-section-2-boxes{
+    display: flex;
+    justify-content: space-between;
+}
+.home-section-2-box{
+    width: 19rem;
+    height: 24rem;
+    border-radius: 25px;
+    background-color: #fff;
+}
+.home-section-2-box h5{
+    padding: 0 2rem;
+    color: #5F5F5F;
+}
+.home-section-2-box p{
+    padding: 0 2rem;
+    font-size: 14px;
+    color: #909090;
+}
+.home-section-2-box-img-1{
+    width: 19rem;
+    height: 11rem;
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Images\home-section2-image-1.png');
+    background-size: cover;
+}
+.home-section-2-box-img-2{
+    width: 19rem;
+    height: 11rem;
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Images\home-section2-image-1.png');
+    background-size: cover;
+}
+.home-section-2-box-img-3{
+    width: 19rem;
+    height: 11rem;
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Images\home-section2-image-1.png');
+    background-size: cover;
+}
+
+/* Section-3 */
+
+.home-section-3{
+    width: 100%;
+    height: 34rem;
+    background-color: #FBCF2D;
+    padding: 4rem 12rem;
+}
+.home-section-3-text{
+    padding-right: 31rem;
+}
+.home-section-3-text p{
+    font-weight: 600;
+}
+.home-section-3-box-img {
+    height: 20px;
+    width: 20px;
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Icons\red-phone-solid.svg');
+    margin-right: 10px;
+    margin-top: 6px;
+}
+.home-section-3-box-img-2 {
+    height: 20px;
+    width: 20px;
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Icons\calendar-days-solid.svg');
+    margin-right: 10px;
+    margin-top: 6px;
+}
+.home-section-3 span{
+    color: #E30517;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+/* footer */
+.footer{
+    width: 100%;
+    height: 77rem;
+    background-color: #323232;
+    padding: 4rem 12rem;
+    color: #fff;
+}
+.footer-sec-1{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid white;
+}
+.footer-sec-1 img{
+    height: 55px;
+    margin-right: 10px;
+}
+.footer-sec-1 p{
+    width: 16rem;
+    font-size: 17px;
+    margin-top: 0.5rem;
+}
+.footer-button {
+    width: 7rem;
+    height: 2.5rem;
+    background-color: #E30517;
+    padding-top: 6px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding-left: 10px;
+}
+.footer-sec-2{
+    padding: 3rem 0;
+    border-bottom: 2px solid white;
+}
+.footer-sec-3{
+    padding: 3rem 15rem 0 15rem;
+}
