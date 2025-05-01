@@ -55,6 +55,20 @@
 .nav-bar-signin-opt{
     display: flex;
     font-weight: 500;
+    margin-top: 6px;
+}
+.nav-bar-health-care-opt{
+    padding: 6px;
+    background-color: #E30517;
+    display: flex;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.nav-bar-health-care-opt img{
+    width: 15px;
 }
 .nav-bar-signin-opt img{
     height: 1rem;
@@ -70,6 +84,7 @@
 .nav-bar-signin-opt-Link{
     color: black;
     text-decoration: none;
+    font-weight: 600;
 }
 .nav-bar-signin-opt-Link:hover{
     color: #ED1C27;
@@ -284,12 +299,14 @@
 
 .home-section-3{
     width: 100%;
-    height: 34rem;
+    height: 33rem;
     background-color: #FBCF2D;
-    padding: 4rem 12rem;
+    padding: 3rem 12rem;
+    display: flex;
+    position: relative;
 }
 .home-section-3-text{
-    padding-right: 31rem;
+    width: 28rem;
 }
 .home-section-3-text p{
     font-weight: 600;
@@ -312,6 +329,15 @@
     color: #E30517;
     font-weight: 600;
     font-size: 17px;
+}
+.home-sec-3-img{
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Images\footer-man.png');
+    position: relative;
+    top: -4.7rem;
+    background-size: cover;
+    width: 18.4rem;
+    height: 34.7rem;
+    margin-left: 14rem;
 }
 
 /* footer */
@@ -353,4 +379,108 @@
 }
 .footer-sec-3{
     padding: 3rem 15rem 0 15rem;
+}
+
+/* Find Agents */
+
+.Find-agent-section{
+    height: 53vh;
+    width: 100%;
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Images\Group 470.jpg');
+    background-size: cover;
+    padding: 2rem 12rem;
+    color: #fff;
+}
+.Find-agent-section p{
+    font-size: 17px;
+    padding: 10px 6rem 20px 6rem;
+}
+.find-agent-Selection-sec{
+    margin: 0 4rem;
+    width: 51rem;
+    height: 6rem;
+    color: #000;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem 1rem;
+}
+.find-Agent-hero-button {
+    width: 20rem;
+    border: 1px solid #909090;
+}
+.find-Agent-hero-button img{
+    margin-left: 7rem;
+}
+.find-agent-dropdown-button{
+    padding: 0.4rem 1rem;
+    background-color: #E30517;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+}
+.agent-section{
+    width: 100%;
+    padding: 4rem 12rem;
+}
+.agent-section h2{
+    font-weight: 600;
+    color: #5F5F5F;
+    text-align: center;
+}
+.agent-section span{
+    color: #EC1C27;
+}
+.agent-list-grid{
+    display: flex;
+    padding: 0.4rem 0.6rem 0.4rem 0;
+    border: 1px solid #DADADA;
+    border-radius: 10px;
+}
+.agent-list-grid img{
+    cursor: pointer;
+}
+.agent{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 17rem;
+    border-radius: 10px;
+    padding: 2rem 2rem;
+    border: 1px solid #DADADA;
+    color: #77819C;
+}
+.agent h4{
+    font-weight: 600;
+    color: #5F5F5F;
+}
+.agent-img{
+    height: 6rem;
+    width: 6rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+.agent-info{
+    display: flex;
+}
+.agents-info-img{
+    width: 1.3rem;
+    margin-right: 0.5rem;
+}
+.agent-info-line{
+    height: 9rem;
+    width: 2px;
+    margin-top: 1rem;
+    margin-right: 0.9rem;
+    background-color: #D8DBE6;
+}
+.agent-info-text{
+    width: 27rem;
+}
+.agent button{
+    padding: 0.5rem 1rem;
+    background-color: #EC1C27;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    margin-top: 0.8rem;
 }
