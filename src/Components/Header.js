@@ -97,9 +97,9 @@ const Header = () => {
                 <div className="d-flex nav-bar-signin-opt-Links">
                     <Link onClick={HomeClick} className='nav-bar-signin-opt-Link'style={Home ? {} : { color: "#ED1C27", textDecoration: "underline"  }} to={'/'}>Home</Link>
                     <Link onClick={FindAnAgentClick} className='nav-bar-signin-opt-Link'style={FindAnAgent ? { color: "#ED1C27", textDecoration: "underline"  } : {}} to={'/FindAgent'}>Find an Agent</Link>
-                    <Link onClick={EventsClick} className='nav-bar-signin-opt-Link'style={FindAnAgent ? { color: "#ED1C27", textDecoration: "underline"  } : {}} to={'/'}>Events</Link>
-                    <Link onClick={LocationsClick} className='nav-bar-signin-opt-Link'style={FindAnAgent ? { color: "#ED1C27", textDecoration: "underline"  } : {}} to={'/'}>Locations</Link>
-                    <Link onClick={MedicareClick} className='nav-bar-signin-opt-Link'style={FindAnAgent ? { color: "#ED1C27", textDecoration: "underline"  } : {}} to={'/'}>Medicare FAQs</Link>
+                    <Link onClick={EventsClick} className='nav-bar-signin-opt-Link'style={FindAnAgent ? { color: "#ED1C27", textDecoration: "underline"  } : {}} to={'/events'}>Events</Link>
+                    <Link onClick={LocationsClick} className='nav-bar-signin-opt-Link'style={FindAnAgent ? { color: "#ED1C27", textDecoration: "underline"  } : {}} to={'/locations'}>Locations</Link>
+                    <Link onClick={MedicareClick} className='nav-bar-signin-opt-Link'style={FindAnAgent ? { color: "#ED1C27", textDecoration: "underline"  } : {}} to={'/FAQs'}>Medicare FAQs</Link>
                     <Link onClick={AboutUsClick} className='nav-bar-signin-opt-Link'style={FindAnAgent ? { color: "#ED1C27", textDecoration: "underline"  } : {}} to={'/'}> About Us</Link>
                 </div>
 

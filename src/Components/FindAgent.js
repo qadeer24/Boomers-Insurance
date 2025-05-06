@@ -2,8 +2,16 @@ import React from 'react'
 import Footer from './Footer'
 import Header from './Header'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 const FindAgent = () => {
+
+    const [GridSelected, setGridSelected] = useState(false);
+        
+    const GridClick = () => {
+        setGridSelected(!GridSelected);
+    };
+    
     return (
         <>
             <Header />
@@ -17,13 +25,13 @@ const FindAgent = () => {
                 <div className="find-agent-Selection-sec">
                     <div className="d-flex">
                         <div>Country</div>
-                        <div style={{marginLeft: "17.6rem"}}>Language</div>
+                        <div style={{ marginLeft: "17.6rem" }}>Language</div>
                     </div>
                     <div className='d-flex'>
                         <div class="dropdown">
                             <button class="btn find-Agent-hero-button " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Select your country
-                            <img src="Icons\arrow-down.png" alt="" />
+                                Select your country
+                                <img src="Icons\arrow-down.png" alt="" />
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
@@ -33,8 +41,8 @@ const FindAgent = () => {
                         </div>
                         <div class="dropdown mx-3">
                             <button class="btn find-Agent-hero-button " type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Select your Language
-                            <img src="Icons\arrow-down.png" alt="" />
+                                Select your Language
+                                <img src="Icons\arrow-down.png" alt="" />
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
@@ -49,162 +57,397 @@ const FindAgent = () => {
 
             <div className='agent-section'>
                 <h2>Results for Agents from <span>Los Angeles </span>who speak <span>English</span></h2>
-                <div className='d-flex justify-content-between my-4' style={{width:"100%"}}>
+                <div className='d-flex justify-content-between my-4' style={{ width: "100%" }}>
                     <div></div>
                     <div className='agent-list-grid'>
-                        <img className='mx-2' src="Icons\grid.png" alt="" />
-                        <img src="Icons\list-selected.svg" alt="" />
-                    </div>
-                </div>
-            
-                <div className="agent">
-                    <div className='d-flex'>
-                        <div><img src="Images\agent-1.png" className='agent-img' alt="" /></div>
-                        <div>
-                            <h4>Roberto Gaspar Jr.</h4>
-                            <p>Los Angeles, Orange</p>
-                            <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0D18273</div>
-                            <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 949-205-5532</div>
-                            <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
-                            <button>Message</button>
-                        </div>
-                    </div>
-                    <div className='agent-info'>
-                        <div className="agent-info-line"></div>
-                        <div className='agent-info-text'>
-                            <h4>About Roberto</h4>
-                            <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
-                        </div>
+                        <img onClick={GridClick} src={GridSelected ? "Icons/grid-selected.svg" : "Icons/grid.png"} className='mx-2' alt="" />
+                        <img onClick={GridClick} src={GridSelected ? "Icons/list.svg" : "Icons/list-selected.svg"} alt="" />
                     </div>
                 </div>
 
-                <div className="agent my-4">
-                    <div className='d-flex'>
-                        <div><img src="Images\agent-2.png" className='agent-img' alt="" /></div>
-                        <div>
-                            <h4>Jose Toscano</h4>
-                            <p>Los Angeles, Riverside, Orange</p>
-                            <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" /> License ID: 0H65749</div>
-                            <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 714-724-8995</div>
-                            <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
-                            <button>Message</button>
+                <div className={ GridSelected ? "d-none": "d-block"}>
+
+                    <div className="agent">
+                        <div className='d-flex'>
+                            <div><img src="Images\agent-1.png" className='agent-img' alt="" /></div>
+                            <div>
+                                <h4>Roberto Gaspar Jr.</h4>
+                                <p>Los Angeles, Orange</p>
+                                <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0D18273</div>
+                                <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 949-205-5532</div>
+                                <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                <button>Message</button>
+                            </div>
+                        </div>
+                        <div className='agent-info'>
+                            <div className="agent-info-line"></div>
+                            <div className='agent-info-text'>
+                                <h4>About Roberto</h4>
+                                <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
+                            </div>
                         </div>
                     </div>
-                    <div className='agent-info'>
-                        <div className="agent-info-line"></div>
-                        <div className='agent-info-text'>
-                            <h4>About Roberto</h4>
-                            <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
+
+                    <div className="agent my-4">
+                        <div className='d-flex'>
+                            <div><img src="Images\agent-2.png" className='agent-img' alt="" /></div>
+                            <div>
+                                <h4>Jose Toscano</h4>
+                                <p>Los Angeles, Riverside, Orange</p>
+                                <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" /> License ID: 0H65749</div>
+                                <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 714-724-8995</div>
+                                <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                <button>Message</button>
+                            </div>
+                        </div>
+                        <div className='agent-info'>
+                            <div className="agent-info-line"></div>
+                            <div className='agent-info-text'>
+                                <h4>About Roberto</h4>
+                                <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
+                            </div>
                         </div>
                     </div>
+
+                    <div className="agent">
+                        <div className='d-flex'>
+                            <div><img src="Images\agent-3.png" className='agent-img' alt="" /></div>
+                            <div>
+                                <h4>Marvin Cervantes</h4>
+                                <p>Los Angeles, Riverside, Orange, San Diego, San Bernardino</p>
+                                <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0H83089</div>
+                                <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 323-637-9202</div>
+                                <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                <button>Message</button>
+                            </div>
+                        </div>
+                        <div className='agent-info'>
+                            <div className="agent-info-line"></div>
+                            <div className='agent-info-text'>
+                                <h4>About Roberto</h4>
+                                <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="agent my-4">
+                        <div className='d-flex'>
+                            <div><img src="Images\agent-1.png" className='agent-img' alt="" /></div>
+                            <div>
+                                <h4>Andre Scott</h4>
+                                <p>Los Angeles, Riverside, Orange, San Bernardino</p>
+                                <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0H16381</div>
+                                <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 949-400-1477</div>
+                                <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English</div>
+                                <button>Message</button>
+                            </div>
+                        </div>
+                        <div className='agent-info'>
+                            <div className="agent-info-line"></div>
+                            <div className='agent-info-text'>
+                                <h4>About Roberto</h4>
+                                <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="agent">
+                        <div className='d-flex'>
+                            <div><img src="Images\agent-5.png" className='agent-img' alt="" /></div>
+                            <div>
+                                <h4>Ayde Huerta</h4>
+                                <p>Los Angeles</p>
+                                <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0F19449</div>
+                                <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 562-900-0841</div>
+                                <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                <button>Message</button>
+                            </div>
+                        </div>
+                        <div className='agent-info'>
+                            <div className="agent-info-line"></div>
+                            <div className='agent-info-text'>
+                                <h4>About Roberto</h4>
+                                <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="agent my-4">
+                        <div className='d-flex'>
+                            <div><img src="Images\agent-1.png" className='agent-img' alt="" /></div>
+                            <div>
+                                <h4>Obdulia Molina</h4>
+                                <p>Los Angeles, Riverside, Orange</p>
+                                <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 678036</div>
+                                <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 562-642-9470 | 213-880-2362</div>
+                                <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                <button>Message</button>
+                            </div>
+                        </div>
+                        <div className='agent-info'>
+                            <div className="agent-info-line"></div>
+                            <div className='agent-info-text'>
+                                <h4>About Roberto</h4>
+                                <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="agent">
+                        <div className='d-flex'>
+                            <div><img src="Images\agent-7.png" className='agent-img' alt="" /></div>
+                            <div>
+                                <h4>Sawsan Beshai</h4>
+                                <p>Los Angeles, Orange</p>
+                                <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0C66583</div>
+                                <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 714-749-4300 | 714-624-2686</div>
+                                <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English</div>
+                                <button>Message</button>
+                            </div>
+                        </div>
+                        <div className='agent-info'>
+                            <div className="agent-info-line"></div>
+                            <div className='agent-info-text'>
+                                <h4>About Roberto</h4>
+                                <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div className="agent">
-                    <div className='d-flex'>
-                        <div><img src="Images\agent-3.png" className='agent-img' alt="" /></div>
-                        <div>
-                            <h4>Marvin Cervantes</h4>
-                            <p>Los Angeles, Riverside, Orange, San Diego, San Bernardino</p>
-                            <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0H83089</div>
-                            <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 323-637-9202</div>
-                            <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
-                            <button>Message</button>
+                <div className={ GridSelected ? "d-block": "d-none"}>
+                    <div className="d-flex justify-content-between">
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-1.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Roberto Gaspar Jr.</h5>
+                                    <p>Los Angeles, Orange</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0D18273</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 949-205-5532</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                    <button className='agent-grid-button agent-grid-button-1'>Message</button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div className='agent-info'>
-                        <div className="agent-info-line"></div>
-                        <div className='agent-info-text'>
-                            <h4>About Roberto</h4>
-                            <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-2.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Jose Toscano</h5>
+                                    <p>Los Angeles, Riverside, Orange</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0H65749</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 714-724-8995</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                    <button className='agent-grid-button agent-grid-button-1'>Message</button>
+                                </div>
+                            </div>
                         </div>
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-3.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Marvin Cervantes</h5>
+                                    <p>Los Angeles, Riverside, Orange, San Diego, San Bernardino</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0H83089</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 323-637-9202</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                    <button className='agent-grid-button agent-grid-button-1'>Message</button>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
+
+                    <div className="d-flex justify-content-between my-4">
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-1.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Andre Scott</h5>
+                                    <p>Los Angeles, Riverside, Orange, San Bernardino</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0H16381</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 949-400-1477</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English</div>
+                                    <button className='agent-grid-button agent-grid-button-2'>Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-5.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Ayde Huerta</h5>
+                                    <p>Los Angeles</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0F19449</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 562-900-0841</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                    <button className='agent-grid-button agent-grid-button-2'>Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-1.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Obdulia Molina</h5>
+                                    <p>Los Angeles, Riverside, Orange</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 678036</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 562-642-9470213-880-2362</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                    <button className='agent-grid-button agent-grid-button-2'>Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="d-flex justify-content-between">
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-7.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Sawsan Beshai</h5>
+                                    <p>Los Angeles, Orange</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0C66583</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 714-749-4300714-624-2686</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English</div>
+                                    <button className='agent-grid-button agent-grid-button-3'>Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-1.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Araceli Perez</h5>
+                                    <p>Los Angeles, Riverside, Orange</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0I07676</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 323-697-4520</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English</div>
+                                    <button className='agent-grid-button agent-grid-button-3'>Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-1.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Alejandro Solorio</h5>
+                                    <p>Los Angeles, Riverside, Orange, San Diego, San Bernardino</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0I84262</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 323-562-2082</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                    <button className='agent-grid-button agent-grid-button-3'>Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="d-flex justify-content-between my-4">
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-10.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Karen Preston</h5>
+                                    <p>Los Angeles</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0I39816</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" /> Phone No: 310-200-5116</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English</div>
+                                    <button className='agent-grid-button agent-grid-button-4'>Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-11.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Nelly Chavez</h5>
+                                    <p>Los Angeles</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0F63831</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 323-695-9967</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                    <button className='agent-grid-button agent-grid-button-4'>Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-12.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Alfonso Muniz</h5>
+                                    <p>Los Angeles</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0G31562</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 562-904-9209</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                    <button className='agent-grid-button agent-grid-button-4'>Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="d-flex justify-content-between">
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-1.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Victor Delgado</h5>
+                                    <p>Los Angeles, Riverside, Orange</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0J10555</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" /> Phone No: 562-242-5054</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English</div>
+                                    <button className='agent-grid-button agent-grid-button-5'>Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-14.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Wendy Hanks</h5>
+                                    <p>Los Angeles</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0H67999</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 562-413-5654</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                    <button className='agent-grid-button agent-grid-button-5'>Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="agent-grid">
+                            <div className='d-flex'>
+                                <div><img src="Images\agent-12.png" className='agent-grid-img' alt="" /></div>
+                                <div>
+                                    <h5>Rosa Madrid</h5>
+                                    <p>Los Angeles</p>
+                                    <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0K59054</div>
+                                    <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 562-577-3854</div>
+                                    <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
+                                    <button className='agent-grid-button agent-grid-button-5'>Message</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-
-                <div className="agent my-4">
-                    <div className='d-flex'>
-                        <div><img src="Images\agent-1.png" className='agent-img' alt="" /></div>
-                        <div>
-                            <h4>Andre Scott</h4>
-                            <p>Los Angeles, Riverside, Orange, San Bernardino</p>
-                            <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0H16381</div>
-                            <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 949-400-1477</div>
-                            <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English</div>
-                            <button>Message</button>
-                        </div>
-                    </div>
-                    <div className='agent-info'>
-                        <div className="agent-info-line"></div>
-                        <div className='agent-info-text'>
-                            <h4>About Roberto</h4>
-                            <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="agent">
-                    <div className='d-flex'>
-                        <div><img src="Images\agent-5.png" className='agent-img' alt="" /></div>
-                        <div>
-                            <h4>Ayde Huerta</h4>
-                            <p>Los Angeles</p>
-                            <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0F19449</div>
-                            <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 562-900-0841</div>
-                            <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
-                            <button>Message</button>
-                        </div>
-                    </div>
-                    <div className='agent-info'>
-                        <div className="agent-info-line"></div>
-                        <div className='agent-info-text'>
-                            <h4>About Roberto</h4>
-                            <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="agent my-4">
-                    <div className='d-flex'>
-                        <div><img src="Images\agent-1.png" className='agent-img' alt="" /></div>
-                        <div>
-                            <h4>Obdulia Molina</h4>
-                            <p>Los Angeles, Riverside, Orange</p>
-                            <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 678036</div>
-                            <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 562-642-9470 | 213-880-2362</div>
-                            <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English, Spanish</div>
-                            <button>Message</button>
-                        </div>
-                    </div>
-                    <div className='agent-info'>
-                        <div className="agent-info-line"></div>
-                        <div className='agent-info-text'>
-                            <h4>About Roberto</h4>
-                            <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="agent">
-                    <div className='d-flex'>
-                        <div><img src="Images\agent-7.png" className='agent-img' alt="" /></div>
-                        <div>
-                            <h4>\Sawsan Beshai</h4>
-                            <p>Los Angeles, Orange</p>
-                            <div><img className='agents-info-img' src="Icons\License-id.svg" alt="" />License ID: 0C66583</div>
-                            <div><img className='agents-info-img' src="Icons\red-phone-solid.svg" alt="" />Phone No: 714-749-4300 | 714-624-2686</div>
-                            <div><img className='agents-info-img' src="Icons\language-icon.svg" alt="" />Languages spoken: English</div>
-                            <button>Message</button>
-                        </div>
-                    </div>
-                    <div className='agent-info'>
-                        <div className="agent-info-line"></div>
-                        <div className='agent-info-text'>
-                            <h4>About Roberto</h4>
-                            <p>I help explain the different parts of Medicare (A, B, C & D), and the differences between Original Medicare, Medicare Supplements, and Advantage plans. I also provide expert, unbiased assistance to Medicare recipients who expect and deserve a high-quality health plan with a provider that best suits their specific needs.</p>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
 
             <div className="footer">
