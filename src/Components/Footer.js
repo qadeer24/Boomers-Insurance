@@ -60,7 +60,7 @@ const Footer = () => {
                     <div>
                         <h5>ARE YOU AN AGENT?</h5>
                         <p>Boomers is always looking for licensed agents.</p>
-                        <button className='footer-button d-flex'>Apply Here</button>
+                        <button className='footer-button'>Apply Here</button>
                     </div>
                 </div>
 

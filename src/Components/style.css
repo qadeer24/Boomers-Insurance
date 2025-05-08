@@ -58,7 +58,7 @@
     margin-top: 6px;
 }
 .nav-bar-health-care-opt{
-    padding: 6px;
+    padding: 6px 15px;
     background-color: #E30517;
     display: flex;
     color: #fff;
@@ -66,6 +66,12 @@
     border: none;
     border-radius: 10px;
     margin-left: 10px;
+    text-decoration: none;
+}
+.nav-bar-health-care-opt:hover{
+    background-color: #FBCF2D;
+    text-decoration: none;
+    color: #000;
 }
 .nav-bar-health-care-opt img{
     width: 15px;
@@ -364,14 +370,11 @@
     margin-top: 0.5rem;
 }
 .footer-button {
-    width: 7rem;
-    height: 2.5rem;
     background-color: #E30517;
-    padding-top: 6px;
+    padding: 6px 2rem;
     border: none;
     border-radius: 5px;
     color: #fff;
-    padding-left: 10px;
 }
 .footer-sec-2{
     padding: 3rem 0;
@@ -770,4 +773,123 @@
 .location-opt-info-2 img{
     height: 1.5rem;
     margin-right: 1rem;
+}
+
+/* Healthcare page */
+.HealthCare-hero-section{
+    height: 45vh;
+    width: 100%;
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Images\healthcare-bg.png');
+    background-size: cover;
+    color: #fff;
+}
+.HealthCare-hero-section p{
+    font-size: 17px;
+    padding: 10px 2rem 20px 2rem;
+}
+.healthcare-sec-1-child{
+    width: 100%;
+    height: 100%;
+    padding: 3rem 12rem;
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+.healthcare-sec-2{
+    width: 100%;
+    padding: 3rem 12rem;
+}
+.healthcare1-part-1{
+    width: 35rem;
+    padding-right: 2rem;
+}
+.healthcare1-part-1 h2{
+    padding-right: 4rem;
+    font-weight: 600;
+    color: #5F5F5F;
+}
+.healthcare1-part-1 h5{
+    /* padding-right: 8rem; */
+    font-weight: 600;
+    color: #5F5F5F;
+}
+.healthcare1-part-1 p{
+    padding-right: 4rem;
+    color: #909090;
+}
+.healthcare-features{
+    width: 15rem;
+    display: flex;
+}
+.healthcare-features img{
+    margin-right: 1rem;
+    width: 3rem;
+}
+.healthcare-spans{
+    display: grid;
+    margin-top: 1.3rem;
+}
+.healthcare-span{
+    color: #909090;
+    line-height: 20px;
+}
+.healthcare-highlight-span{
+    color: #5F5F5F;
+    font-weight: 500;
+}
+.healthcare-features-Link{
+    background-color: #E30517;
+    color: #fff;
+    margin-top: 4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+.healthcare-features-Link:hover{
+    color: #000;
+    text-decoration: none;
+    background-color: #FBCF2D;
+}
+.healthcare1-part-2{
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Images\healthcare-image-1.png');
+    background-size: cover;
+    width: 28rem;
+    height: 32rem;
+    border-radius: 25px;
+}
+.healthcare2-part-2{
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Images\healthcare-image-2.png');
+    background-size: cover;
+    width: 28rem;
+    height: 32rem;
+    border-radius: 25px;
+}
+.healthcare2-part-1{
+    width: 35rem;
+    padding-left: 2rem;
+}
+.healthcare2-part-1 h2{
+    padding-right: 8rem;
+    font-weight: 600;
+    color: #5F5F5F;
+}
+.healthcare2-part-1 h5{
+    /* padding-right: 8rem; */
+    font-weight: 600;
+    color: #5F5F5F;
+}
+.healthcare2-part-1 p{
+    padding-right: 4rem;
+    color: #909090;
+}
+.healthcare3-part-2{
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Images\healthcare-image-3.png');
+    background-size: cover;
+    width: 28rem;
+    height: 32rem;
+    border-radius: 25px;
+}
+.healthcare4-part-2{
+    background-image: url('F:\Websites\React JS\boomers-insurance\public\Images\healthcare-image-4.png');
+    background-size: cover;
+    width: 28rem;
+    height: 27rem;
+    border-radius: 25px;
 }

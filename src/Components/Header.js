@@ -109,7 +109,7 @@ const Header = () => {
                     </div>
 
                     <div className="d-flex">
-                        <button className='nav-bar-health-care-opt'><img src="Icons\health-care-button-img.svg" alt="" />Healthcare Providers</button>
+                        <Link to={'/health-care-provider'} className='nav-bar-health-care-opt'>Healthcare Providers</Link>
                     </div>
                 </div>
             </div>
